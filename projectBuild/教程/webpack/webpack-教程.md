@@ -199,6 +199,7 @@
 	8. 实例一个插件：
 		new CleanWebpackPlugin('./build')
 	备注：最新版的CleanWebpackPlugin不传任何参数
+	webpack2.0(不包含2.0)一下版本传递文件路径，第一个参数是string,第二个参数是对象可以进行配置
 
 
 
@@ -230,7 +231,6 @@
 	备注：如果使用的clean-webpack-plugin插件是2.0以上的，则不会出现问题7
 
 #### 12. 提取dev环境配置文件(dev环境搭建)
-
 	1. 复制一份webpack.build.js，改名为：webpack.dev.js
 	2. 安装dev-server：npm i webpack-dev-server@2 -D（下载第2个版本，3版本有兼容性问题）
 	3. 修改package.json的配置："dev": "webpack-dev-server --config ./config/webpack.dev.js"
