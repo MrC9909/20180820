@@ -1,5 +1,4 @@
-function ride(a,b) {
-    return a * b;
+function ride(x,y) {
+    return x * y;
 }
-
-export {ride}
+export {ride};

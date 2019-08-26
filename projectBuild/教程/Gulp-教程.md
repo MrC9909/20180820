@@ -28,7 +28,6 @@
     /-src 源码目录
       / -js
       / -less
-      / -css   
       /- index.html
     /- gulpfile.js  gulp配置文件
     /- package.json 配置清单 
@@ -254,7 +253,7 @@ gulp.task('htmlmin', () => {
 
 ####  10.**使用gulp-imagemin优化图片**
 
-  1. 安装：npm install gulp-imagemin -–save-dev
+  1. 安装：npm install gulp-imagemin -–save-dev  建议使用cnpm下载
 
   2. 引入：const imagemin = require('gulp-imagemin');
 
@@ -281,13 +280,13 @@ gulp.task('imagemin', function () {
 
    1. 安装如下模块：  
    ```
-    npm install gulp-livereload --save-dev  npm install gulp-connect --save-dev  npm install opn --save-dev
+    npm install gulp-livereload --save-dev  npm install gulp-connect --save-dev  npm install open --save-dev
    ```
    2. 引入如下模块：
 ```
     const livereload = require('gulp-livereload');
     const connect = require('gulp-connect');
-    const opn = require('opn');
+    const opn = require('open');
 ```
 
 
@@ -336,5 +335,4 @@ gulp.task('imagemin', function () {
 
 2. 使用async和await
 3. 返回一个stream
-
-​    ...
+4. .........

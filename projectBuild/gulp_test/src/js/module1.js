@@ -1,3 +1,5 @@
-export default function add(a,b) {
-    return a + b;
+function add(x,y) {
+    return x+y;
 }
+
+export default add;
