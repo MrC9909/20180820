@@ -33,7 +33,7 @@
 		- npm install webpack@3 -g  //全局安装
 		- npm install webpack@3 --save-dev  //局部安装
 	3. 小试牛刀处理一个js
-		执行命令：webpack src/js/index.js build/index.js
+		执行命令：webpack ./src/js/index.js ./build/index.js
 	观察发现webpack会把es6的模块化语法，直接编译为浏览器识别的模块化语法，不过类似于箭头函数等依然存在
 
 #### 2. 使用webpack配置文件
@@ -137,6 +137,7 @@
 	    })
 	   }
 	5.备注：因为css提取成单独文件，不再包含在js中了，所以要修改url-loader配置publicPath为:'../img'
+
 #### 7. js语法检查
 
 	1. 安装jshint-loader：npm i jshint-loader --save -D

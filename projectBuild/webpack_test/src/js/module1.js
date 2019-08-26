@@ -6,4 +6,4 @@ function ride(x,y) {
     return x*y;
 }
 
-export {add,ride}
+export {add,ride};
