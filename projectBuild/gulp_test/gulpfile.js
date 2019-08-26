@@ -129,16 +129,16 @@ gulp.task('cssmin', function () {
         .pipe(livereload());
 });
 
-//8.img-min
+//8.imgs-min
 gulp.task('imagemin', function () {
-    return gulp.src('./src/img/*.{png,jpg,gif,ico}')
+    return gulp.src('./src/imgs/*.{png,jpg,gif,ico}')
         .pipe(imagemin({
             optimizationLevel: 3, //类型：Number  默认：3  取值范围：0-7（优化等级）
             progressive: true, //类型：Boolean 默认：false 无损压缩jpg图片
             interlaced: true, //类型：Boolean 默认：false 隔行扫描gif进行渲染
             multipass: true //类型：Boolean 默认：false 多次优化svg直到完全优化
         }))
-        .pipe(gulp.dest('dist/img'))
+        .pipe(gulp.dest('dist/imgs'))
         .pipe(livereload());
 });
 
@@ -171,7 +171,7 @@ gulp.task('watch', function() {
     livereload.listen();
     gulp.watch('./src/js/*.js',gulp.series('lint','babel','browserify','compress'));
     gulp.watch('./src/less/*.less', gulp.series('less','concat','cssmin'));
-    gulp.watch('./src/img/*.{png,jpg,gif,ico}', gulp.series('imagemin'));
+    gulp.watch('./src/imgs/*.{png,jpg,gif,ico}', gulp.series('imagemin'));
     gulp.watch('./src/index.html', gulp.series('minify'));
 });
 
